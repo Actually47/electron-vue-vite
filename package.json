@@ -1,0 +1,39 @@
+{
+  "name": "electron-vue-vite",
+  "version": "0.0.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050",
+    "electron:start": "wait-on tcp:3000 && cross-env IS_DEV=true electron .",
+    "electron:dev": "concurrently -k \"cross-env BROWSER=none yarn dev\" \"yarn electron:start\"",
+    "electron:prebuild": "electron-builder",
+    "electron:build": "vite build && cross-env IS_DEV=false electron-builder"
+  },
+  "dependencies": {
+    "pinia": "^2.0.13",
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.1",
+    "concurrently": "^7.1.0",
+    "cross-env": "^7.0.3",
+    "electron": "^18.1.0",
+    "electron-builder": "^23.0.3",
+    "vite": "^2.9.5",
+    "wait-on": "^6.0.1"
+  },
+  "build": {
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "preload.js"
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "electron_dist"
+    }
+  }
+}
