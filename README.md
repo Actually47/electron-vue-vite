@@ -5,7 +5,7 @@ An electron + vue + vite boilerplate
 ## Get started with this quick guide
 
 - Clone this repository
-- Use your prefreed package manager to install the node modules
+- Use your preferred package manager to install the node modules
 - To start a development server, use the `npm run electron:serve` command
 - You can build the app using the `npm run electron:build` command
 
@@ -13,7 +13,7 @@ An electron + vue + vite boilerplate
 
 ## Overview
 
-The electron-vue-vite boilerplate is built on vite boilerplate along with the vue router and pinia for centralized state management, and it does not change anything in the vite boilerplate except for the history mode of the vue router, which is required for vue router to work in electron. As for what this change actually means, it replaces `useWebHistory` with `useWebHashHistory` because electron cannot use the usual webhistory method, and this is all that has changed in vite's boilerplate.
+The electron-vue-vite boilerplate is built on vite boilerplate along with the vue router and pinia for centralized state management, and it does not change anything in the vite boilerplate except for the history mode of the vue router, which is required for vue router to work in electron. As for what this change means, it replaces `useWebHistory` with `useWebHashHistory` because electron cannot use the usual webhistory method, and this is all that has changed in vite's boilerplate.
 Two new files were created in the boilerplate root, main.js and preload.js, based on the format outlined in the official electron documentation, but we modified the main.js file to support hot reloading by replacing
 
 ```js
@@ -61,7 +61,7 @@ Because of this, we keep our changes to a minimum, so adding anything you wish t
 
 ## Why
 
-The purpose of this boilerplate is simply to provide a simple configuration for adding and editing configuration with vue + vite + electron. There are a couple of simple boilerplates available like [electron-vite-vue](https://github.com/electron-vite/electron-vite-vue) and [vite-electron-builder](https://github.com/cawa-93/vite-electron-builder), but I wanted to make it even easier for a new user to add and edit configuration. Considering that it is designed to adhere to the original vite boilerplate structure, new users might have an easier time comprehending what exactly is going on. Check out [electron-vite-vue](https://github.com/electron-vite/electron-vite-vue) and [vite-electron-builder](https://github.com/cawa-93/vite-electron-builder) if you need a secure boilerplate.
+The purpose of this boilerplate is simply to provide a simple configuration for adding and editing configuration with vue + vite + electron. There are a couple of simple boilerplates available like [electron-vite-vue](https://github.com/electron-vite/electron-vite-vue) and [vite-electron-builder](https://github.com/cawa-93/vite-electron-builder), but I wanted to make it even easier for a new user to add and edit configuration. Considering that it is designed to adhere to the original vite boilerplate structure, new users might have an easier time comprehending what the changes are. Check out [electron-vite-vue](https://github.com/electron-vite/electron-vite-vue) and [vite-electron-builder](https://github.com/cawa-93/vite-electron-builder) if you need a secure boilerplate.
 
 &emsp;
 
